@@ -1,0 +1,22 @@
+For first time in new PC:
+
+pip install pipenv
+
+For Every Project:
+
+creating virtual environment:
+
+pipenv --python 3.7
+
+Install Django in virtual environment:
+
+pipenv install django
+
+To active virtual env:
+
+pipenv shell
+
+Start django proect:
+
+django-admin startproject news_portal . 
+("." is used for current directory)
