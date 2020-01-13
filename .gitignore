@@ -4,4 +4,6 @@ db.sqlite3
 */.DS_Store
 news/__pycache__
 project/__pycache__
-.gitignore
+project/__pycache__/urls.cpython-37.pyc
+media/news/
+.gitignore/*

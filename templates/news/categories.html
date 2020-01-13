@@ -1,23 +1,18 @@
 {% extends "partials/layout.html" %}
 
-            {% block headertop %}
-                {% include "partials/headertop.html" %}
-            {% endblock headertop %}
+    {% block headertop %}
+        {% include "partials/headertop.html" %}
+    {% endblock headertop %}
 
-            {% block section3 %}
-                {% include "partials/section3.html" %}
-            {% endblock section3 %}
+    {% block section4 %}
+        {% include "news/category-partials.html" %}
+    {% endblock section4 %}
 
-            {% block section4 %}
-                {% include "news/category-partials.html" %}
-            {% endblock section4 %}
+    {% block footer %}
+        {% include "partials/footer.html" %}
+    {% endblock footer %}
 
-            {% block footer %}
-                {% include "partials/footer.html" %}
-            {% endblock footer %}
-
-            {% block script %}
-                {% include "partials/script.html" %}
-            {% endblock script %}    
-            
-       
+    {% block script %}
+        {% include "partials/script.html" %}
+    {% endblock script %}    
+    
