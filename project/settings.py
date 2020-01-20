@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Custom app
     'news',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,8 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'ca021506d5e63b'
+EMAIL_HOST_PASSWORD = 'b4231a79522fb4'
+EMAIL_PORT = '2525'

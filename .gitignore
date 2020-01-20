@@ -8,3 +8,6 @@ project/__pycache__/urls.cpython-37.pyc
 media/news/
 project/__pycache__/urls.cpython-37.pyc
 .gitignore/*
+media/*
+news/__pycache__/*
+account/__pycache__/*
