@@ -2,3 +2,7 @@
 db.sqlite3
 .DS_Store
 */.DS_Store
+news/__pycache__
+project/__pycache__
+.gitignore
+media/*
