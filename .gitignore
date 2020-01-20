@@ -6,4 +6,5 @@ news/__pycache__
 project/__pycache__
 project/__pycache__/urls.cpython-37.pyc
 media/news/
+project/__pycache__/urls.cpython-37.pyc
 .gitignore/*
