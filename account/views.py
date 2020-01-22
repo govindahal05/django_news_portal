@@ -34,6 +34,7 @@ class UserRegistrationView(View):
                 "account/activation_message.html",
                 {
                     "domain": domain_url.domain,
+                    "user": user,
                     "uid": urlsafe_base64_encode(force_bytes(user.id)),
                     "token": activation_token.make_token(user),
                 },
@@ -41,14 +42,13 @@ class UserRegistrationView(View):
 
             email = EmailMessage(message_subject, message, to=[user_email])
             email.send()
-            activation_msg = "Open you email to activate your account."
+            activation_msg = "Open your email to activate account."
             return render(
                 request, "account/activate_email.html", {"activation_msg": activation_msg}
             )
 
         template_name = "account/signup.html"
         return render(request, template_name, {"form": form})
-
 
 def activate(request, uidb64, token):
     try:
@@ -59,5 +59,6 @@ def activate(request, uidb64, token):
 
     if user is not None and activation_token.check_token(user, token):
         user.is_active = True
+        user.save()
         return render(request, "account/activation_success.html")
     return render(request, "account/activation_fail.html")
