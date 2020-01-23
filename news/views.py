@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
 from django.urls import reverse
 from django.utils.text import slugify
 from django.views.generic import ( 
@@ -60,8 +61,8 @@ class NewsTemplateView(TemplateView):
 class NewsCreateView(LoginRequiredMixin, CreateView):
     model = News
     template_name = "news/create.html"
-    login_url = "/accounts/login/"
-    success_url = "/"
+    login_url = reverse_lazy("login")
+    success_url = reverse_lazy("home")
     form_class = NewsCreateForm
 
     def form_valid(self, form):
@@ -80,8 +81,15 @@ class NewsCreateView(LoginRequiredMixin, CreateView):
 class NewsUpdateView(LoginRequiredMixin, UpdateView):
     model = News
     template_name = "news/update.html"
+    fields = "title", "content", "cover_image", "category"
+    login_url = reverse_lazy("login")
+    success_url = reverse_lazy("home")
 
 class NewsDeleteView(LoginRequiredMixin, DeleteView):
     model = News
-    template_name = "news/delete.html"
+    login_url = reverse_lazy("login")
+    success_url = reverse_lazy("home")
+
+    def get(self, request, *args, **kwargs):
+        return self.post(self, request, *args, **kwargs)
 
