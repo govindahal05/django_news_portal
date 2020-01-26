@@ -13,7 +13,7 @@
                     <div class="thumbnail order-md-2" style="background-image: url('{{news.cover_image.url}}')"></div>
                     <div class="contents order-md-1 pl-0">
                         <h2><a href="blog-single.html">{{ news.title }}</a></h2>
-                        <p class="mb-3">{{news.content}}</p>
+                            <p>{{ news.content|truncatewords_html:35}}</p>
                         <div class="post-meta">
                             <span class="d-block"><a href="#">{{ news.author }}</a> in <a href="#">{{ category.title }}</a></span>
                             <span class="date-read">{{ news.created_at }}</span>
