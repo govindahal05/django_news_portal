@@ -4,12 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
+pylint = "<2.0.0"
 
 [packages]
 django = "==2.2.2"
 pillow = "==7.0.0"
 pylint = "*"
+django-crispy-forms = "==1.8.1"
 
 [requires]
 python_version = "3.7"

@@ -1,0 +1,22 @@
+{% extends "partials/layout.html" %}
+{% load crispy_forms_tags %}
+
+{% block headertop %}
+    {% include "partials/headertop.html" %}
+{% endblock headertop %}
+
+{% block section1 %}
+<div class="site-section">
+    <div class="container">
+        <p>You are logged out successfully. <a href="{% url 'login' %}">Login</a> again. <p>
+    </div>
+</div>
+{% endblock section1 %}
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock footer %}
+
+{% block script %}
+    {% include "partials/script.html" %}
+{% endblock script %}    
