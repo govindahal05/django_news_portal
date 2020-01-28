@@ -1,0 +1,2 @@
+Django
+News Portal site 
