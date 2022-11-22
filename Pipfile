@@ -8,7 +8,7 @@ pylint = "<2.0.0"
 
 [packages]
 django = "==2.2.2"
-pillow = "==7.0.0"
+pillow = "==9.3.0"
 pylint = "*"
 django-crispy-forms = "==1.8.1"
 
